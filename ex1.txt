@@ -1,0 +1,87 @@
+VERIFICARE DISPONIBILITATE
+Flux principal
+
+1. INITIAZA VERIFICARE DISPONIBILITATE
+Sistemul verifica disponibilitatea pentru un vehicul dorit de client si tine cont de preferintele introduse (tip, oficiu, interval timp)
+
+2. CAUTA INTERVAL DISPONIBIL
+Sistemul consulta BD si determina daca vehiculul este disponibil in perioada dorita.
+
+3. CONFIRMA DISPONIBILITATE
+Daca vehiculul este disponibil, sistemul il va rezerva temporar.
+
+4. CONTINUA PROCESUL DE REZERVARE
+Sistemul revine la fluxul principal al rezervarii pentru a continua cu afisarea nr de inchiriere.
+
+Flux alternativ 1 – VEHICUL INDISPONIBIL
+ - La pasul 3 daca vehiculul nu este disponibil:
+  a) Sistemul afiseaza un mesaj care spune ca vehiculul ales este indisponibil
+  b) Cazul de utilizare revine la INTRODUCE PREFERINTE pentru a lasa userul sa faca selectarea altor preferinte
+
+Exceptii
+1. TOATE VEHICULELE INDISPONIBILE PENTRU ACEST TIP
+Daca nu exista niciun vehicul de tipul selectat disponibil in oficiu pentru perioada dorita sistemul genereaza un raport.
+
+
+
+INITIERE INCHIRIERE
+Flux principal
+1. PREZENTARE LA OFICIU
+Clientul ajunge la oficiul de inchiriere si ofera un nr de inchiriere.
+
+2. CAUTA ACORD DE INCHIRIERE
+Angajatul introduce numarul in sistem si sistemul afiseaza acordul/contractul.
+
+3. VALIDARE ACORD
+Angajatul verifica acordul cu clientul.
+
+4. IMPRIMARE SI SEMNARE ACORD
+Sistemul imprima acordul si este semnat de catre client.
+
+5. SELECTARE ASIGURARE
+Sistemul afiseaza optiunile de asigurare si clientul alege una dintre optiuni.
+
+6. IMPRIMARE POLITA DE ASIGURARE
+Sistemul imprima polita semnata si atasata la acordul semnat de catre client.
+
+Exceptii
+1. FARA REZERVARE
+   a) Angajatul introduce preferintele clientului.
+   b) Sistemul verifica daca e disponibil
+   c) Daca este disponibil, se continua cu afisare pret etc.
+2. VEHICUL REZERVAT INDISPONIBIL
+   -Se cere clientului sa selecteze alte preferinte.
+
+
+PROCESARE RETURNARE VEHICUL
+Flux principal
+1. INREGISTRARE KILOMETRAJ SI COMBUSTIBIL
+Clientul da informatii despre kilometraj si nivelul de combustibil al vehiculului, urmand ca angajatul sa le introduca in sistem.
+
+2. CALCUL COSTURI
+Sistemul calculeaza cantitatea de combustibil consumat si costul total al inchirierii vehiculului respectiv.
+
+3. AFISARE SI VERIFICARE COSTURI
+Costul total este afisat si verificat de catre client.
+
+4. PLATA COSTURI
+Clientul achita plata. Angajatul inregistreaza plata in sistem.
+
+Exceptii
+1. VEHICUL AVARIAT
+   a) Angajatul noteaza avarierea vehicului in sistem.
+   b) Sistemul tipareste formularul de revendicare care este completat si semnat de catre client.
+2. CLIENTUL CONTESTA COSTUL
+   a) Angajatul inregistreaza contestatia in sistem.
+
+
+CREARE RAPOARTE MANAGER
+Flux principal
+1. SELECTARE TIP RAPORT
+Managerul selecteaza tipul de raport dorit.
+
+2. GENERARE RAPORT
+Sistemul genereaza si afiseaza raportul.
+
+3. IMPRIMARE RAPORT
+Daca managerul solicita sistemul tipareste raportu
